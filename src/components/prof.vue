@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .back-cont {
     width: 248px;
     height: 214px;
@@ -25,6 +25,21 @@ export default {
     border-radius: 13.15px;
     background-color: #fff;
     box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+    @media (max-width: 1024px) {
+        width: clamp(200px, 29vw, 292px);
+        height: 255px;
+    }
+    @media (max-width: 540px) {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    flex-direction: unset;
+    align-items: unset;
+    border-radius: 0;
+    background-color: unset;
+    box-shadow: none;
+    }
 }
 .circle {
     position: relative;
@@ -32,6 +47,15 @@ export default {
     height: 88px;
     border-radius: 65.77px;
     background: linear-gradient(135deg, #CDE5F3 0%, #485C99 100%);
+    @media (max-width: 1024px) {
+        width: 104px;
+        height: 98px;
+    }
+    @media (max-width: 540px) {
+        --widt-circ: clamp(66px, 12vw, 76px);
+        width: calc(var(--widt-circ) + 3px);
+        height: calc(var(--widt-circ) + 3px);
+    }
 }
 .face {
     position: absolute;
@@ -41,9 +65,17 @@ export default {
     right: 0;
     margin: auto;
     width: 84px;
-    height: 84px;
+    height: auto;
     mix-blend-mode: normal;
     filter: drop-shadow(0px 10px 20px rgba(0, 59, 108, 0.13));
+    @media (max-width: 1024px) {
+        width: 100px;
+        height: auto;
+    }
+    @media (max-width: 540px) {
+        width: clamp(61px, 12vw, 71px);
+        height: auto;
+    }
 }
 .name {
     font-family: 'Poppins', sans-serif;
@@ -53,6 +85,9 @@ export default {
 }
 .name_pdng {
     padding: 10px 0 5px;
+    @media (max-width: 540px) {
+        padding: 0;
+    }
 }
 .email {
     font-style: normal;
@@ -60,5 +95,10 @@ export default {
     font-size: 0.9rem;
     line-height: 17px;
     color: #838785;
+}
+.name, .email {
+    @media (max-width: 540px) {
+        display: none;
+    }
 }
 </style>

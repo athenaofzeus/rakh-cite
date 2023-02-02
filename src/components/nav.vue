@@ -1,6 +1,6 @@
 <template>
   <div class="nav-panel">
-    <img v-show="false" class="menu-ico" src="../assets/bars-solid.svg" alt="img">
+    <img v-show="menuVisib" class="menu-ico" src="../assets/bars-solid.svg" alt="img">
     <div class="lang-box">
         <span class="lang-name">{{$store.state.lang[1].toUpperCase()}}</span> <!-- тут сделать смену языка по клику -->
         <span class="lang-globe"></span>
@@ -12,19 +12,42 @@
 import store from '../store/store'
 export default {
     name: 'navigation-comp',
-    store
+    store,
+    data () {
+        return {
+            width: window.innerWidth,
+            menuVisib: false
+        }
+    },
+    beforeMount () {
+        if (this.width <= 540) {
+            this.menuVisib = true
+        }
+    },
+    mounted () {
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 540) {
+                this.menuVisib = true
+            } else {
+                this.menuVisib = false
+            }
+        })
+    }
 }
 </script>
 
-<style>
+<style lang="scss">
 .nav-panel {
     width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
-    background-color: cadetblue;
+    border: 1px solid red;
     padding-inline: clamp(30px, 7.5%, 89px);
+    @media (max-width: 540px) {
+        justify-content: space-between;
+    }
 }
 .menu-ico {
     width: 16px;

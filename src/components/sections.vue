@@ -13,10 +13,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .sections-holder {
   position: relative;
   top: -214px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 .section:first-child {
   position: absolute;
@@ -28,19 +31,20 @@ export default {
   position: absolute;
   width: 168px;
     top: -75px;
-    right: -153px;
+    left: 153px;
 }
 .section:nth-child(3) {
   position: absolute;
   width: 137px;
-    left: -130px;
+  left: clamp(-130px, -11vw, -105px);
     top: 93px;
 }
 .section:nth-child(4) {
   position: absolute;
   width: 123px;
     top: 141px;
-    left: 253px;
+    /* left: max(210px, calc(210px + (235 - 210) * ((100vw - 834px) / (1280 - 834)))); */
+  left: clamp(210px, 20vw, 253px);
 }
 .section:nth-child(5) {
   position: absolute;
