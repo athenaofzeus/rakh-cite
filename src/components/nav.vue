@@ -51,6 +51,7 @@ export default {
 }
 .menu-ico {
     width: 16px;
+    height: auto;
 }
 .lang-box {
     width: 50px;
