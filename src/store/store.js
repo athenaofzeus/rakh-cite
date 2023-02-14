@@ -5,13 +5,15 @@ const store = createStore({
     return {
       ovnerName : 'Екатерина Рахилина',
       email: 'rakhilina@gmail.com',
-      sections : [
-        {'Curriculum vitae' : 'briefcase-solid'},
-        {'Публикации' : 'book-solid'},
-        {'Галерея' : 'images-regular'},
-        {'Видео' : 'circle-play-regular'},
-        {'Контакты' : 'address-book-regular'}
-      ],
+      sections : {
+        'Curriculum vitae' : 'briefcase-solid',
+        'Публикации' : 'book-solid',
+        'Галерея' : 'images-regular',
+        'Видео' : 'circle-play-regular',
+        'Контакты' : 'address-book-regular',
+        'Проекты' : 'network-wired-solid'
+      },
+      sectionsLength : 0,
       lang: ['ru', 'eng'],
       shortBio : [
         'доктор филологических наук (2000)',
@@ -30,19 +32,30 @@ const store = createStore({
         'корпусная лингвистика',
         'компьютерная лингвистика',
         'лексическая типология'
-      ]
+      ],
+      listMenuShown: false,
+      menuVisib: false,
+      width: window.innerWidth,
     }
   },
   getters : {
-
   },
   mutations : {
-
+    changeMenuState(state) {
+      state.listMenuShown = !state.listMenuShown
+    },
+    getLength (state) {
+      state.sectionsLength = Object.keys(state.sections).length
+    }
   },
   actions : {
-
+    changeMenuState( {commit} ) {
+      commit('changeMenuState')
+    },
+    getLength ({commit}) {
+      commit('getLength')
+    }
   }
-
 })
 
 export default store

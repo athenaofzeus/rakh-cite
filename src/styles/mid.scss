@@ -6,6 +6,9 @@
   @media (min-width: 540px) and (max-width: 1024px) {
     padding-left: calc(12px + (98 - 12) * ((100vw - 540px) / (1024 - 540)));
   }
+  @media (max-width: 540px) {
+    padding-left: 15px;
+  }
     
 }
 .mid-header {

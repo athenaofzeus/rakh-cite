@@ -15,6 +15,16 @@ body {
       right: clamp(24px, 8vw, 110px);
     }
   }
+  .mob-block {
+    background-color: none;
+    @media (max-width: 540px) {
+      display: block;
+      margin-top: 12px;
+      background-color: white;
+      box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+      border-radius: 13.1532px;
+    }
+  }
   .sections {
     position: absolute;
   }
@@ -61,12 +71,8 @@ body {
   }
   .section-box_mrpd {
     padding-top: 145px;
-    /* padding-left: Min(183px, calc(5px + (183 - 5) * ((100vw - 320px) / (1280 - 320)))); */
-    /* padding-right: Min(236px, calc(5px + (236 - 5) * ((100vw - 320px) / (1280 - 320)))); */
-    padding-left: Min(205px, calc(120px + (205 - 120) * ((100vw - 1024px) / (1280 - 1024))));
+    padding-left: Min(240px, calc(120px + (240 - 120) * ((100vw - 1024px) / (1280 - 1024))));
     padding-right: Min(95px, calc(66px + (95 - 66) * ((100vw - 1024px) / (1280 - 1024))));
-    /* padding-right: Min(193px, calc(66px + (193 - 66) * ((100vw - 1024px) / (1280 - 1024)))); */
-    /* padding-right: Min(193px, calc(86px + (193 - 86) * ((100vw - 1024px) / (1280 - 1024)))); */
     @media (max-width: 1024px) {
       padding-top: 100px;
       padding-left: Min(10px, calc(10px + (23 - 10) * ((100vw - 320px) / (834 - 320))));
@@ -82,5 +88,8 @@ body {
     margin-top: -105px;
     @media (max-width: 1024px) and (min-width: 540px) {
       margin-top: -10px;
+    }
+    @media (max-width: 540px) {
+      margin-top: 0;
     }
   }
