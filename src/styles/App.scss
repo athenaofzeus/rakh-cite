@@ -1,0 +1,95 @@
+body {
+    margin: 0 auto;
+    background-color: #FAF8FC;
+  }
+  .section-box {
+    position: relative;
+    /* overflow: hidden; */
+    padding-bottom: 95px;
+    @media (max-width: 1024px) {
+      padding-top: 102px;
+      padding-bottom: 0;
+    }
+    @media (max-width: 540px) {
+      position: absolute;
+      right: clamp(24px, 8vw, 110px);
+    }
+  }
+  .mob-block {
+    background-color: none;
+    @media (max-width: 540px) {
+      display: block;
+      margin-top: 12px;
+      background-color: white;
+      box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+      border-radius: 13.1532px;
+    }
+  }
+  .sections {
+    position: absolute;
+  }
+  .projects {
+    position: absolute;
+  }
+  .container{
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+  }
+  .container_mrgn {
+    margin-top: 20px;
+  }
+  .top-land {
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 540px) {
+      position: relative;
+    }
+  }
+  .top-land_mrpd {
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-inline: clamp(5px, 2vw, 30px);
+    /* padding-left: Min(89px, calc(15px + (89 - 15) * ((100vw - 320px) / (1280 - 320)))); */
+  }
+  .header {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: Min(3.1rem, clamp(1.15rem, 5vw, 3.1rem));
+    line-height: 70px;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    color: #25323D;
+    @media (max-width: 540px) {
+      line-height: 46px;
+    }
+  }
+  .section-box_mrpd {
+    padding-top: 145px;
+    padding-left: Min(240px, calc(120px + (240 - 120) * ((100vw - 1024px) / (1280 - 1024))));
+    padding-right: Min(95px, calc(66px + (95 - 66) * ((100vw - 1024px) / (1280 - 1024))));
+    @media (max-width: 1024px) {
+      padding-top: 100px;
+      padding-left: Min(10px, calc(10px + (23 - 10) * ((100vw - 320px) / (834 - 320))));
+      padding-right: Min(5px, calc(5px + (66 - 5) * ((100vw - 320px) / (834 - 320))));
+    }
+    @media (max-width: 540px) {
+          padding: 0;
+      }
+  }
+  .mid-land {
+    display: flex;
+    flex-direction: column;
+    margin-top: -105px;
+    @media (max-width: 1024px) and (min-width: 540px) {
+      margin-top: -10px;
+    }
+    @media (max-width: 540px) {
+      margin-top: 0;
+    }
+  }

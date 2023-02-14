@@ -1,10 +1,10 @@
 <template>
   <div class="project-box">
-    <div class="rc">НКРЯ</div>
-    <div class="rus-corp">Русская корпусная грамматика</div>
-    <div class="mlex">
+    <a href="https://ruscorpora.ru/" target="_blank"><div class="rc">НКРЯ</div></a>
+    <a href="http://rusgram.ru/" target="_blank"><div class="rus-corp">Русская корпусная грамматика</div></a>
+    <a href="http://lextyp.org/" target="_blank"><div class="mlex">
       <img src="../assets/mlex.svg" alt="img">
-    </div>
+    </div></a>
   </div>
 </template>
 
@@ -14,17 +14,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .project-box {
   position: relative;
   top: -214px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 .rc, .rus-corp, .mlex {
   position: absolute;
   transition: 0.45s;
 }
 .rc:hover, .rus-corp:hover, .mlex:hover {
-  transform: scale(1.06);
+  transform: scale(1.08);
   cursor: pointer;
 }
 .rc {
@@ -60,7 +63,7 @@ export default {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   top: 197px;
-    left: -164px;
+  left: clamp(-164px, -12vw, -90px);
 }
 .mlex {
   width: 57px;
