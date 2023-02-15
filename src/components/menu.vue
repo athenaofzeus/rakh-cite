@@ -1,6 +1,6 @@
 <template>
     <ul class="menu" v-if="$store.state.listMenuShown">
-        <li class="menu-line" v-for="[k, value], index in Object.entries($store.state.sections).slice(0,-1)" :key="k">
+        <li class="menu-line" v-for="[k, value], index in Object.entries($store.state.sections)" :key="k">
             <div>
             <img :src="require(`../assets/${value}.svg`)" alt="img" class="sect-icon">
             <span class="menu-name">{{ k }}</span>

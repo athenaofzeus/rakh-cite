@@ -1,6 +1,6 @@
 <template>
   <div class="sections-holder" v-if="sectVisib">
-    <div class="section" v-for="[k, value] in Object.entries($store.state.sections)" :key="k">
+    <div class="section" v-for="[k, value] in Object.entries($store.state.sections).slice(0, -1)" :key="k">
       
       <img :src="require(`../assets/${value}.svg`)" alt="img" class="sect-icon">
       <span class="sect-name">{{ k }}</span>
