@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 
+
 const store = createStore({
   state () {
     return {
@@ -36,6 +37,17 @@ const store = createStore({
       listMenuShown: false,
       menuVisib: false,
       width: window.innerWidth,
+      chosenSect : NaN,
+      videoLinks : [
+        'jUUJmnilqy0',
+        'tnNpcgeAbts',
+        'eUL6mDbHzwk',
+        '_bTVHL5jDtk',
+        'rCL-3npZSVs',
+        'M0YboCvXTyA',
+        'n63naVT95aQ',
+        'PwxyMG_QLig'
+      ]
     }
   },
   getters : {

@@ -23,6 +23,7 @@ body {
       background-color: white;
       box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
       border-radius: 13.1532px;
+      padding-bottom: 25px;
     }
   }
   .sections {
@@ -36,9 +37,11 @@ body {
     display: flex;
     margin: 0 auto;
     padding: 0;
-    border: 1px solid;
+    /* border: 1px solid; */
     font-family: 'Inter', sans-serif;
     flex-direction: column;
+    /* overflow: hidden; */
+    min-height: calc(100vh - 105px);
   }
   .container_mrgn {
     margin-top: 20px;

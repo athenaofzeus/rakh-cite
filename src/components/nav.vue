@@ -84,7 +84,7 @@
       background-image: url(../assets/globe-solid.svg);
   }
   .lang-name {
-      font-family: 'Poppins';
+      font-family: 'Poppins', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 0.7rem;

@@ -1,10 +1,10 @@
 .mid-box {
-  padding-left: 105px;
+  padding-left: 32px;
   @media (min-width: 1025px) and (max-width: 1280px) {
-    padding-left: calc(35px + (105 - 35) * ((100vw - 1025px) / (1280 - 1025)));
+    padding-left: calc(22px + (28 - 22) * ((100vw - 1025px) / (1280 - 1025)));
   }
   @media (min-width: 540px) and (max-width: 1024px) {
-    padding-left: calc(12px + (98 - 12) * ((100vw - 540px) / (1024 - 540)));
+    padding-left: calc(12px + (22 - 12) * ((100vw - 540px) / (1024 - 540)));
   }
   @media (max-width: 540px) {
     padding-left: 15px;
@@ -12,19 +12,20 @@
     
 }
 .mid-header {
-    font-family: 'Poppins', sans-serif;
-    white-space: nowrap;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
-    color: #25323D;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #25323D;
 }
 .interests {
   display: flex;
-    flex-wrap: wrap;
-    max-width: 595px;
+  cursor: pointer;
+  flex-wrap: wrap;
+  max-width: 595px;
 }
 .interests_mrpd {
   margin-top: 10px;
